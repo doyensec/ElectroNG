@@ -1,0 +1,23 @@
+.dashboardEnumerationDetailsList li:first-child {
+  padding-top: 0;
+}
+
+.dashboardEnumerationDetailsList li:last-child {
+  padding-bottom: 0;
+}
+
+.dashboardEnumerationDetailsList .titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dashboardEnumerationDetailsList .titleEditButton {
+  padding-right: 0;
+}
+
+
+.userSelectable {
+  -webkit-user-select:text;  /* Chrome all / Safari all */
+  user-select: text;      /* Likely future */  
+}

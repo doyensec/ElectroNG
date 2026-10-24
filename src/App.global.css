@@ -1,0 +1,38 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+@import '~antd/dist/antd.css';
+body {
+  user-select: none;
+}
+
+.clamp-lines__button {
+  background: none;
+  border: 0;
+  color: rgba(255, 0, 0, 0.7);
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 1px solid #00000000;
+  font-size: 0.95em;
+}
+
+.clamp-lines__button:hover {
+  border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.selectable {
+  cursor: pointer;
+}
+
+
+.selectableText {
+  -webkit-user-select:text;  /* Chrome all / Safari all */
+  user-select: text;
+}
+
+.ant-menu-sub.ant-menu-inline:not(:empty)  {
+  height: auto !important;
+  opacity: 1 !important;
+}

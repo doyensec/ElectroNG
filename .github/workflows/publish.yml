@@ -1,0 +1,56 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ macos-latest ]
+
+    steps:
+    
+      - name: Checkout git repo
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          token: ${{ secrets.ACCESS_TOKEN }}
+        
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+        
+      - name: Cache
+        uses: actions/cache@v3.0.3
+        with:
+          # A list of files, directories, and wildcard patterns to cache and restore
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Node, NPM and Yarn
+        uses: actions/setup-node@v3.2.0
+        with:
+          node-version: 14.19.3
+
+      - name: Install dependencies
+        run: |
+          cd ElectroNG-core
+          npm install .
+          npm run build
+          cd ..
+          yarn add file:ElectroNG-core
+          yarn install --prefer-offline
+          
+      - name: Signining/Notarizing & Publish releases
+        env:
+          # These values are used for auto updates signing
+          CI: true
+        run: |
+          yarn run publish

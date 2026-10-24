@@ -1,0 +1,33 @@
+.menuItem {
+  padding-left: 24px !important;
+}
+
+.menuItem > span:not([role='img']) {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 2em;
+  position: absolute;
+}
+
+.menuItem > span > span {
+  height: 1em;
+}
+
+.menuItem > span > span.activeScan:before {
+  content: '●';
+  border-radius: 30px;
+  color: #52c41a;
+  margin-right: 5px;
+  font-size: 1.1em;
+}
+
+.menuItem > span > span:last-of-type {
+  font-size: 0.8em;
+}
+.divider {
+  border-left: 1px solid #ccc;
+  height: 50px;
+  margin-top: 10px;
+  display: inline-block;
+  position: absolute;
+}

@@ -1,0 +1,7 @@
+{
+  "SPLASHSCREEN": "/splashscreen",
+  "NEW_PROJECT": "/new-project",
+  "DASHBOARD": "/dashboard",
+  "SCAN": "scan",
+  "FINDINGS": "findings"
+}

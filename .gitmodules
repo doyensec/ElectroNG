@@ -1,0 +1,4 @@
+[submodule "ElectroNG-core"]
+	path = ElectroNG-core
+	url = https://github.com/doyensec/ElectroNG-core.git
+	branch = main

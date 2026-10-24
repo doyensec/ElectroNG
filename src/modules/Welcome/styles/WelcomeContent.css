@@ -1,0 +1,30 @@
+.containerBackground {
+  -webkit-app-region: drag;
+  background-image: url('../assets/bg_1.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerCentered {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.versionAndUpdate {
+  bottom: 83px;
+  position: absolute;
+  right: 0;
+  font-size: 0.914em;
+  padding-right: 1.8em;
+  color: white;
+  text-shadow: 0 0 14px #000000aa;
+}
+
+.versionAndUpdate span {
+  text-decoration: underline;
+}

@@ -1,0 +1,3 @@
+bucket: electrong-software
+region: us-west-2
+provider: s3

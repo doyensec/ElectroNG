@@ -1,0 +1,43 @@
+:root {
+  --header-border: 1px solid #e0e0e0;
+  --horizontal-padding: 20px;
+}
+
+.welcomeView {
+  height: 100vh;
+  width: 100vw;
+}
+
+.headerLayout {
+  padding: 0 var(--horizontal-padding) !important;
+  background-color: transparent !important;
+  -webkit-app-region: drag;
+}
+
+.headerLayoutTitle {
+  vertical-align: -4px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.headerSplashscreen {
+  position: absolute;
+  width: 100%;
+}
+
+.headerBorder {
+  border-bottom: var(--header-border);
+}
+
+.footerLayout {
+  padding: 16px 20px !important;
+}
+
+.footerLayoutRight {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.footerBorder {
+  border-top: var(--header-border);
+}

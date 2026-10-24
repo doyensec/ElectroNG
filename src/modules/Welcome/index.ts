@@ -1,0 +1,1 @@
+export { WelcomeLayout } from './WelcomeLayout';

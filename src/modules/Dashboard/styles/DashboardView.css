@@ -1,0 +1,53 @@
+.dashboardSider {
+  overflow: auto;
+  height: 100vh;
+  left: 0;
+}
+
+.dashboardSiderHeader {
+  padding: 0 !important;
+}
+
+.dashboardSiderHeaderLogo {
+  margin-left: 24px;
+}
+
+.dashboardContentLayout {
+  height: 100vh;
+}
+
+.dashboardContentMenu {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 0 !important;
+  background-color: #fff !important;
+}
+
+.dashboardContent {
+  margin-top: 64px;
+  overflow: auto;
+}
+
+.noScans {
+  bottom: 0;
+  left: 200px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 50%;
+  z-index: 1;
+  max-width: 100vh;
+  max-height: 70vh;
+}
+.noScans h1 {
+  font-size: 2vw;
+  margin-top: 39%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.noScans img {
+  filter: blur(8px);
+}

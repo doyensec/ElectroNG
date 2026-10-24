@@ -1,0 +1,20 @@
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search {
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.scanSettingWithoutCheckbox {
+  padding-left: 1.7em;
+}
